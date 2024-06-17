@@ -40,6 +40,7 @@ class BoardServiceTest {
         // then
         assertNotNull(responseDto);
         assertEquals("제목", responseDto.getTitle());
+        System.out.println("게시물 작성 성공");
     }
 
     @Test
@@ -57,6 +58,7 @@ class BoardServiceTest {
         // then
         assertNotNull(responseDto);
         assertEquals("제목", responseDto.getTitle());
+        System.out.println("게시물 조회 성공");
     }
 
     @Test
@@ -72,6 +74,7 @@ class BoardServiceTest {
         });
 
         assertEquals("먼저 작성하여 소식을 알려보세요!", exception.getMessage());
+        System.out.println("게시물 조회 실패");
     }
     @Test
     @DisplayName("게시물 단건 조회")
@@ -88,6 +91,7 @@ class BoardServiceTest {
         // then
         assertNotNull(responseDto);
         assertEquals("제목", responseDto.getTitle());
+        System.out.println("게시물 단건 조회 성공");
     }
 
     @Test
@@ -104,6 +108,7 @@ class BoardServiceTest {
         });
 
         assertEquals("해당 게시글을 찾을 수 없습니다.", exception.getMessage());
+        System.out.println("게시물 단건 조회 실패");
     }
 
 
@@ -124,6 +129,7 @@ class BoardServiceTest {
         // then
         assertNotNull(updateDto);
         assertEquals("새 제목", updateDto.getTitle());
+        System.out.println("게시물 수정 성공");
     }
     @Test
     @DisplayName("게시물 수정 실패")
@@ -142,6 +148,7 @@ class BoardServiceTest {
         // then
         assertNotNull(updateDto);
         assertEquals("새 제목", updateDto.getTitle());
+        System.out.println("게시물 수정 실패");
     }
 
     @Test
